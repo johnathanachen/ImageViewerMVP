@@ -17,27 +17,34 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getData(url: urlString)
         
     }
     
     // MARK: - Networking
-    
     func getData(url: String) {
         Alamofire.request(urlString).responseJSON {
             response in
             if response.result.isSuccess {
-                print("Success")
+                let responseJSON : JSON = JSON(response.result.value!)
+                self.updateData(json: responseJSON)
             }
             else {
                 print("error")
             }
         }
     }
+    
+    // MARK: - JSON Parsing
+    func updateData(json: JSON) {
+        
+        let collectionNames = json
+        print(collectionNames)
+    }
 
-
+    
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
