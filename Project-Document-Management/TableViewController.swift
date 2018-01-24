@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class TableViewController: UITableViewController {
-    var incomingJSON = [myJSON]()
+    var incomingJSON : JSON = JSON()
     
     let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
     
@@ -27,6 +27,7 @@ class TableViewController: UITableViewController {
             response in
             if response.result.isSuccess {
                 let responseJSON : JSON = JSON(response.result.value!)
+        
                 self.updateData(json: responseJSON)
             }
             else {
