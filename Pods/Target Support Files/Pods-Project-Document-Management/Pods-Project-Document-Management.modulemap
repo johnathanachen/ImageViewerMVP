@@ -1,0 +1,6 @@
+framework module Pods_Project_Document_Management {
+  umbrella header "Pods-Project-Document-Management-umbrella.h"
+
+  export *
+  module * { export * }
+}
