@@ -21,13 +21,12 @@ class TableViewController: UITableViewController {
     // 1. Download initial json of image collections -
     // 2. Decode into models -
     // 3. Loop through each model and download the zip file -
-    // 4. Unzip each zipped file
+    // 4. Unzip each zipped file -
     // 5. Update my images collection with unzippedUrl location
     // 6. Extract preview image
     
     // MARK: - Networking
 
-    
     func getJSON() {
         
         let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
@@ -56,21 +55,33 @@ class TableViewController: UITableViewController {
         task.resume()
     }
     
+    func downloadZipFile(json: myJSON) {
+        
+    }
+    
     // Download zip files
     func downloadZipFiles() {
         
         let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
         let config = URLSessionConfiguration.default
         let defaultSession = URLSession(configuration: config)
-        let url = URL(string: urlString)!
-        var errorMessage = ""
         
-
         for collection in incomingJSON {
             let url = URL(string: collection.zipped_images_url)!
             
             defaultSession.downloadTask(with: url, completionHandler: { (tempLocation, resp, error) in
                 // 1.  Unzip to caches or documents directory
+                let fileManager = FileManager.default
+                let urls = fileManager.urls(for: .documentDirectory,
+                                            in: .userDomainMask)
+                
+                if let documentDirectory: URL = urls.first {
+                    let documentURL = documentDirectory.appendingPathComponent("txtFile.txt")
+                    // data you want to write to file
+                    URLResponse
+                    try! resp.write(to: documentURL, options: .atomic)
+                }
+    
                 
                 // 2. Update your model with unzippedURL location
             })
