@@ -7,42 +7,34 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+import Zip
 
 class TableViewController: UITableViewController {
-    var incomingJSON = [myJSON]()
     
-    let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
+    var incomingJSON = [myJSON]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getJSON()
-        
     }
+    
+    // 1. Download initial json of image collections -
+    // 2. Decode into models -
+    // 3. Loop through each model and download the zip file -
+    // 4. Unzip each zipped file
+    // 5. Update my images collection with unzippedUrl location
+    // 6. Extract preview image
     
     // MARK: - Networking
-    
-    func getData(url: String) {
-        Alamofire.request(urlString).responseJSON {
-            response in
-            if response.result.isSuccess {
-                print("Success")
-            }
-            else {
-                print("error")
-            }
-        }
-    }
+
     
     func getJSON() {
+        
+        let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
         let config = URLSessionConfiguration.default
         let defaultSession = URLSession(configuration: config)
-        
         let decoder = JSONDecoder()
-        let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
         let url = URL(string: urlString)!
-        
         var errorMessage = ""
         
         let task = defaultSession.dataTask(with: url) { data, response, error in
@@ -54,7 +46,7 @@ class TableViewController: UITableViewController {
                 do {
                     let incomingJSON = try decoder.decode([myJSON].self, from: data)
                     self.incomingJSON = incomingJSON
-                    print(incomingJSON[1].zipped_images_url)
+                    
                 } catch let decodeError as NSError {
                     errorMessage += "Decoder error: \(decodeError.localizedDescription)"
                     return
@@ -64,6 +56,26 @@ class TableViewController: UITableViewController {
         task.resume()
     }
     
+    // Download zip files
+    func downloadZipFiles() {
+        
+        let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
+        let config = URLSessionConfiguration.default
+        let defaultSession = URLSession(configuration: config)
+        let url = URL(string: urlString)!
+        var errorMessage = ""
+        
+
+        for collection in incomingJSON {
+            let url = URL(string: collection.zipped_images_url)!
+            
+            defaultSession.downloadTask(with: url, completionHandler: { (tempLocation, resp, error) in
+                // 1.  Unzip to caches or documents directory
+                
+                // 2. Update your model with unzippedURL location
+            })
+        }
+    }
 
     // MARK: - Table view data source
 
