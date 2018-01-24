@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJSON()
+
         
     }
     
@@ -34,36 +34,7 @@ class TableViewController: UITableViewController {
             }
         }
     }
-    
-    func getJSON() {
-        let config = URLSessionConfiguration.default
-        let defaultSession = URLSession(configuration: config)
-        
-        let decoder = JSONDecoder()
-        let urlString = "https://s3-us-west-2.amazonaws.com/mob3/image_collection.json"
-        let url = URL(string: urlString)!
-        
-        var errorMessage = ""
-        
-        let task = defaultSession.dataTask(with: url) { data, response, error in
-            if let error = error {
-                errorMessage += "DataTask error: " + error.localizedDescription + "\n"
-            } else if let data = data,
-                let response = response as? HTTPURLResponse,
-                response.statusCode == 200 {
-                do {
-                    let incomingJSON = try decoder.decode([myJSON].self, from: data)
-                    self.incomingJSON = incomingJSON
-                    print(incomingJSON[1].zipped_images_url)
-                } catch let decodeError as NSError {
-                    errorMessage += "Decoder error: \(decodeError.localizedDescription)"
-                    return
-                }
-            }
-        }
-        task.resume()
-    }
-    
+
 
     // MARK: - Table view data source
 
