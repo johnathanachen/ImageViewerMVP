@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct myJSON : Codable {
-    let collection_name : String
-    let zipped_images_url : String
+class Collections {
+    var collection_name : String = ""
+    var zipped_images_url : String = ""
 }
 

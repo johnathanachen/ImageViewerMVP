@@ -14,7 +14,7 @@
 		B8C04292201838F5009331C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C04291201838F5009331C3 /* Assets.xcassets */; };
 		B8C04295201838F5009331C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C04293201838F5009331C3 /* LaunchScreen.storyboard */; };
 		B8C0429D20183A75009331C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0429C20183A75009331C3 /* TableViewController.swift */; };
-		B8C0429F20183ACB009331C3 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0429E20183ACB009331C3 /* data.swift */; };
+		B8C0429F20183ACB009331C3 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0429E20183ACB009331C3 /* Collections.swift */; };
 		B8C042A12018439D009331C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C042A02018439D009331C3 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		B8C04294201838F5009331C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C04296201838F5009331C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8C0429C20183A75009331C3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		B8C0429E20183ACB009331C3 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		B8C0429E20183ACB009331C3 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		B8C042A02018439D009331C3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E06BCA158B770B62C499FC57 /* Pods-Project-Document-Management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-Document-Management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-Document-Management/Pods-Project-Document-Management.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +63,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B8BF7EB5201A2C390014A774 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B8C04291201838F5009331C3 /* Assets.xcassets */,
+				B8C04293201838F5009331C3 /* LaunchScreen.storyboard */,
+				B8C0428A201838F5009331C3 /* AppDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		B8C0427E201838F5009331C3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +95,12 @@
 		B8C04289201838F5009331C3 /* Project-Document-Management */ = {
 			isa = PBXGroup;
 			children = (
-				B8C0428A201838F5009331C3 /* AppDelegate.swift */,
 				B8C0429C20183A75009331C3 /* TableViewController.swift */,
 				B8C042A02018439D009331C3 /* TableViewCell.swift */,
-				B8C0429E20183ACB009331C3 /* data.swift */,
+				B8C0429E20183ACB009331C3 /* Collections.swift */,
 				B8C0428E201838F5009331C3 /* Main.storyboard */,
-				B8C04291201838F5009331C3 /* Assets.xcassets */,
-				B8C04293201838F5009331C3 /* LaunchScreen.storyboard */,
 				B8C04296201838F5009331C3 /* Info.plist */,
+				B8BF7EB5201A2C390014A774 /* Supporting */,
 			);
 			path = "Project-Document-Management";
 			sourceTree = "<group>";
@@ -233,7 +241,7 @@
 			files = (
 				B8C0429D20183A75009331C3 /* TableViewController.swift in Sources */,
 				B8C042A12018439D009331C3 /* TableViewCell.swift in Sources */,
-				B8C0429F20183ACB009331C3 /* data.swift in Sources */,
+				B8C0429F20183ACB009331C3 /* Collections.swift in Sources */,
 				B8C0428B201838F5009331C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

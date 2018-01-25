@@ -22,13 +22,16 @@ class TableViewController: UITableViewController {
         
     }
     
+    // MARK: - Initiate
+    let collections = Collections()
+
     // MARK: - Networking
     func getData(url: String) {
         Alamofire.request(urlString).responseJSON {
             response in
             if response.result.isSuccess {
                 let responseJSON : JSON = JSON(response.result.value!)
-        
+                print("Success")
                 self.updateData(json: responseJSON)
             }
             else {
@@ -39,10 +42,18 @@ class TableViewController: UITableViewController {
     
     // MARK: - JSON Parsing
     func updateData(json: JSON) {
-        let decoder = JSONDecoder()
-        let collection = try! decoder.decode([myJSON].self, from: json.rawData())
-        print(collection)
+        
+        let collectionName = json["collection_name"]
+        collections.collection_name = collectionName.stringValue
+        print("collection name set")
+        
+        
     }
+        
+//        let decoder = JSONDecoder()
+//        let collection = try! decoder.decode([myJSON].self, from: json.rawData())
+//        print(collection)
+
     
     // MARK: - Download Zip
     func downloadZipFileForJSON(json: JSON) {
