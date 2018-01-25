@@ -11,7 +11,7 @@ import UIKit
 class CollectionsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionNameLabel: UILabel!
-    @IBOutlet weak var collectionPreview: UIImageView!
+    @IBOutlet weak var thumbnailImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
