@@ -20,7 +20,10 @@ class CollectionsTableViewController: UITableViewController {
         Networking().fetch { (result) in
             guard let collections = result as? [Collections] else {return}
             
-            self.collections = collections
+            DispatchQueue.main.async {
+                self.collections = collections
+                self.tableView.reloadData()
+            }
 
             
         }
