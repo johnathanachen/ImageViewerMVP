@@ -7,30 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BBC868B07E868961B268052 /* Pods_Project_Document_Management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F5BF60526351379CBA5911 /* Pods_Project_Document_Management.framework */; };
+		B8122C1320199A8800D112C3 /* Pods_Project_Document_Management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F5BF60526351379CBA5911 /* Pods_Project_Document_Management.framework */; };
 		B889F48220193900004BD06A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B889F48120193900004BD06A /* Podfile */; };
+		B889F485201974F9004BD06A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889F484201974F9004BD06A /* Networking.swift */; };
+		B889F48720198CA7004BD06A /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889F48620198CA7004BD06A /* Download.swift */; };
+		B889F48920198CBD004BD06A /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889F48820198CBD004BD06A /* Collections.swift */; };
 		B8C0428B201838F5009331C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0428A201838F5009331C3 /* AppDelegate.swift */; };
 		B8C04290201838F5009331C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C0428E201838F5009331C3 /* Main.storyboard */; };
 		B8C04292201838F5009331C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C04291201838F5009331C3 /* Assets.xcassets */; };
 		B8C04295201838F5009331C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C04293201838F5009331C3 /* LaunchScreen.storyboard */; };
-		B8C0429D20183A75009331C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0429C20183A75009331C3 /* TableViewController.swift */; };
-		B8C0429F20183ACB009331C3 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0429E20183ACB009331C3 /* data.swift */; };
-		B8C042A12018439D009331C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C042A02018439D009331C3 /* TableViewCell.swift */; };
+		B8C0429D20183A75009331C3 /* CollectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0429C20183A75009331C3 /* CollectionsTableViewController.swift */; };
+		B8C042A12018439D009331C3 /* CollectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C042A02018439D009331C3 /* CollectionsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85F5BF60526351379CBA5911 /* Pods_Project_Document_Management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Document_Management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD660C864F845D570184C9AB /* Pods-Project-Document-Management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-Document-Management.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-Document-Management/Pods-Project-Document-Management.release.xcconfig"; sourceTree = "<group>"; };
 		B889F48120193900004BD06A /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B889F484201974F9004BD06A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		B889F48620198CA7004BD06A /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		B889F48820198CBD004BD06A /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		B8C04287201838F5009331C3 /* Project-Document-Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-Document-Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C0428A201838F5009331C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8C0428F201838F5009331C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8C04291201838F5009331C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8C04294201838F5009331C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C04296201838F5009331C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8C0429C20183A75009331C3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		B8C0429E20183ACB009331C3 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
-		B8C042A02018439D009331C3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B8C0429C20183A75009331C3 /* CollectionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewController.swift; sourceTree = "<group>"; };
+		B8C042A02018439D009331C3 /* CollectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewCell.swift; sourceTree = "<group>"; };
 		E06BCA158B770B62C499FC57 /* Pods-Project-Document-Management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-Document-Management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-Document-Management/Pods-Project-Document-Management.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BBC868B07E868961B268052 /* Pods_Project_Document_Management.framework in Frameworks */,
+				B8122C1320199A8800D112C3 /* Pods_Project_Document_Management.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,16 @@
 				85F5BF60526351379CBA5911 /* Pods_Project_Document_Management.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8122C0F201999AE00D112C3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B8C0428A201838F5009331C3 /* AppDelegate.swift */,
+				B8C04291201838F5009331C3 /* Assets.xcassets */,
+				B8C04293201838F5009331C3 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		B8C0427E201838F5009331C3 = {
@@ -85,14 +99,14 @@
 		B8C04289201838F5009331C3 /* Project-Document-Management */ = {
 			isa = PBXGroup;
 			children = (
-				B8C0428A201838F5009331C3 /* AppDelegate.swift */,
-				B8C0429C20183A75009331C3 /* TableViewController.swift */,
-				B8C042A02018439D009331C3 /* TableViewCell.swift */,
-				B8C0429E20183ACB009331C3 /* data.swift */,
+				B8C0429C20183A75009331C3 /* CollectionsTableViewController.swift */,
+				B8C042A02018439D009331C3 /* CollectionsTableViewCell.swift */,
+				B889F484201974F9004BD06A /* Networking.swift */,
+				B889F48620198CA7004BD06A /* Download.swift */,
+				B889F48820198CBD004BD06A /* Collections.swift */,
 				B8C0428E201838F5009331C3 /* Main.storyboard */,
-				B8C04291201838F5009331C3 /* Assets.xcassets */,
-				B8C04293201838F5009331C3 /* LaunchScreen.storyboard */,
 				B8C04296201838F5009331C3 /* Info.plist */,
+				B8122C0F201999AE00D112C3 /* Support */,
 			);
 			path = "Project-Document-Management";
 			sourceTree = "<group>";
@@ -227,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8C0429D20183A75009331C3 /* TableViewController.swift in Sources */,
-				B8C042A12018439D009331C3 /* TableViewCell.swift in Sources */,
-				B8C0429F20183ACB009331C3 /* data.swift in Sources */,
+				B8C0429D20183A75009331C3 /* CollectionsTableViewController.swift in Sources */,
+				B889F485201974F9004BD06A /* Networking.swift in Sources */,
+				B8C042A12018439D009331C3 /* CollectionsTableViewCell.swift in Sources */,
+				B889F48720198CA7004BD06A /* Download.swift in Sources */,
+				B889F48920198CBD004BD06A /* Collections.swift in Sources */,
 				B8C0428B201838F5009331C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
