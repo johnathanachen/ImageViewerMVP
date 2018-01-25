@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Zip
 
 class TableViewController: UITableViewController {
     var incomingJSON : JSON = JSON()
@@ -38,9 +39,19 @@ class TableViewController: UITableViewController {
     
     // MARK: - JSON Parsing
     func updateData(json: JSON) {
-        
-        let collectionNames = json
-        print(collectionNames)
+        let decoder = JSONDecoder()
+        let collection = try! decoder.decode([myJSON].self, from: json.rawData())
+        print(collection)
+    }
+    
+    // MARK: - Download Zip
+    func downloadZipFileForJSON(json: JSON) {
+        // Alamo Fire
+    }
+    
+    // MARK: - UpZip File
+    func unZipFileToLocation() {
+        // Zip
     }
 
     
@@ -62,8 +73,8 @@ class TableViewController: UITableViewController {
         let index = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         
-        cell.textLabel?.text = self.incomingJSON[index].collection_name
-        
+//        cell.textLabel?.text = self.incomingJSON[index].collection_name
+//
         // Configure the cell...
 
         return cell
